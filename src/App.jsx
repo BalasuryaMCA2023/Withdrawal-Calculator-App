@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './components/Landingpage';
 import Calculator from './components/WithdrawalCalculator';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<Calculator />} />
       </Routes>
+      <Analytics /> {/* Vercel Analytics */}
     </BrowserRouter>
   );
 }
